@@ -5,6 +5,8 @@
 ### Run with "sudo"
 ###
 
+export LANG=en_US
+
 set -x
 set -e
 
