@@ -150,11 +150,6 @@ mkdir -p /home/bitcoin/.mynode/
 chown bitcoin:bitcoin /home/bitcoin
 chown -R bitcoin:bitcoin /home/bitcoin/.mynode/
 
-# Update host info
-echo "myNode" > /etc/hostname
-sed -i 's/rock64/myNode/g' /etc/hosts
-sed -i 's/rockpi4-b/myNode/g' /etc/hosts
-
 # Update sources
 apt-get -y update --allow-releaseinfo-change
 
@@ -1042,6 +1037,11 @@ if [ -f /boot/efi/EFI/debian/grubx64.efi ]; then
     mkdir -p /boot/efi/EFI/BOOT
     cp -f /boot/efi/EFI/debian/grubx64.efi /boot/efi/EFI/BOOT/bootx64.efi
 fi
+
+# Update host info
+echo "myNode" > /etc/hostname
+sed -i 's/rock64/myNode/g' /etc/hosts
+sed -i 's/rockpi4-b/myNode/g' /etc/hosts
 
 sync
 
