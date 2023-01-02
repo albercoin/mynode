@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export LANG=en_US
+
 set -e
 set -x 
 shopt -s nullglob
