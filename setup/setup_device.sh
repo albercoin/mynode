@@ -232,8 +232,8 @@ else
     echo "========================================="
 fi
 
-# Install Openbox GUI
-if [ $IS_X86 = 1 ]; then
+# Install Openbox GUI if not desktop available
+if [ $IS_X86 = 1 ] && [ -z $DESKTOP_SESSION ]; then
     apt-get -y install xorg chromium openbox lightdm
 fi
 
